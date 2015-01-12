@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" charset="utf-8">
+			function popup() {
+				var number = prompt('Enter a number:');
+				dec2hex(number);
+			}
+			function dec2hex(num) {
+				var result = (+num).toString(16).toUpperCase();
+				alert(result);  
+			}
+		</script>
+	</head>
+
+	<body onload="popup()">
+	</body>
+</html>

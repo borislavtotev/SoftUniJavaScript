@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Mouse Coodinates</title>
+		<style>
+			#textField {
+				width: 800px;
+				height: 400px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<textarea name="textFieldName" onmousemove="cord(event)" id="textField"></textarea>
+		</div>
+		<script>
+			function cord(e) {
+				console.log('X:' + e.clientX + '; Y:' + e.clientY + ' Time: ' + new Date() );
+				document.getElementById("textField").value = 'X:' + e.clientX + '; Y:' + e.clientY + ' Time: ' + new Date() + "\n" + document.getElementById("textField").value;
+					setTimeout(function() {
+					}, 2000);
+			};
+		</script>
+	</body>
+</html>

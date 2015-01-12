@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Calculate Expression</title>
+		<script type="text/javascript" charset="utf-8" src="_14_calcExpression.js">	
+		</script>
+		<style>
+			body, ::-webkit-input-placeholder {
+				color: white;
+				font-size: 14px;
+			}
+			::-webkit-input-placeholder {
+				text-align: center;	
+			}
+			
+			input[type="text"], #result {
+				color: white;
+				width: 200px;
+				background-color: blue;
+			}
+			article p {
+				width: 200px;
+				text-align: center;
+			}
+			
+			article p:nth-child(1) {
+				width: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<article>
+				<input type="text" name="input" id="inputExpression" placeholder="Please add the expression" charset="utf-8" />
+				<p><input type="submit" value="Eval result" onclick="calculates()" /></p>
+				<p id="result">Here you will see the result</p>
+			</article>
+		</section>
+	</body>
+</html>

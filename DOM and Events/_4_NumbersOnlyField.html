@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>_4_NumbersOnlyField</title>
+	</head>
+
+	<body>
+		<div>
+			<input type="text" name="textFieldName" value="" onkeypress="check(event)" id="textField"/>
+		</div>
+		<script>
+			function check(e) {
+				var a = document.getElementById("textField");
+				var pattern = /^\d+$/igm;
+				
+				var key;
+				if (event.which == null) {
+					key = String.fromCharCode(event.keyCode);// IE
+					
+				} else if (event.which != 0 && event.charCode != 0) {
+					key =  String.fromCharCode(event.which);// the rest
+					
+				} else {
+					key = null;// special key
+				};
+
+				if (! pattern.test(key)) {
+					a.style.background = "red";
+					setTimeout(function() {
+						a.style.background = "none";
+					}, 1000);
+					e.preventDefault();
+				};
+			};
+		</script>
+	</body>
+</html>

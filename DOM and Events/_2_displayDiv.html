@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css" media="screen">
+			#result {
+				border: 1px solid black;
+				width: 80px;
+			}	
+		</style>
+	</head>
+	<body>
+		<div>
+			first div
+		</div>
+		<div>
+			second div
+		</div>
+		<div class="empty"></div>
+		<div>
+			third div
+			<div>
+				inner div
+			</div>
+		</div>
+		<ul id="result"></ul>
+		<script>
+			var divs = document.getElementsByTagName('div');
+
+			var results = '';
+			for ( i = 0; i < divs.length; i++) {
+				if (divs[i].innerText != '') {
+					results += '<li>' + divs[i].innerText + '</li>';					
+				}
+			}
+			document.getElementById("result").innerHTML = results;
+		</script>
+	</body>
+</html>
